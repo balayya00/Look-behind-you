@@ -1,7 +1,9 @@
 # Pre-Implementation Research Report
 
-**Project:** Don't Look Behind You  
-**Research date:** 2026-09-11  
+**Project:** Don't Look Behind You
+
+**Research date:** 2026-09-11
+
 **Repository state:** One README and no application, package manifest, assets, CI, or deployment configuration. The existing repository therefore permits a clean implementation without migration risk.
 
 This report records the technical and asset research completed before implementation. It is intentionally a decision document, not a claim that the planned work is already implemented.
@@ -210,18 +212,18 @@ Run the production preview and inspect menu, loading, HUD, legibility, collision
 
 ## 15. Known technical risks
 
-| Risk | Impact | Mitigation |
-|---|---|---|
-| Browser autoplay policy | Silent opening | Create/resume audio from explicit Start/Enter gesture; show audio status fallback. |
-| Pointer lock behavior varies and hosted preview may be framed | Cannot look | Feature detect; Promise/void + raw/standard fallback; friendly error; direct-page guidance. |
-| Dynamic shadows on integrated GPUs | Low FPS | One shadow light, quality tiers, capped DPR, adaptive fallback. |
-| Procedural art can read as generic | Lower atmosphere | Strong clinic identity, custom signage/narrative, material variation, composition, lighting, prop silhouettes. |
-| Synthesized sounds may feel artificial | Lower fear response | Layer filtered noise/oscillators, spatial timing, silence, varied envelopes, room-dependent filtering. |
-| Axis-aligned collision diverges from visible props | Sticking/clipping | Collide only architecture/closed doors, keep props non-blocking or use simple authored blockers, add tests. |
-| Long sequence can become unwinnable after refresh | Player frustration | Explicit deterministic stage machine, checkpoints, stage-derived world state, save validation, reset action. |
-| WebGL context loss | Blank screen | Context lost/restored UI and recover/reload path; error boundary. |
-| Background tab produces huge delta/audio drift | Teleport/event burst | Delta clamp, pause on visibility, cancel transient schedules. |
-| Scope versus polish | Generic broad demo | One compact, replayable clinic floor; prioritize controls/audio/event timing over extra rooms or enemies. |
+| Risk                                                          | Impact               | Mitigation                                                                                                     |
+| ------------------------------------------------------------- | -------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Browser autoplay policy                                       | Silent opening       | Create/resume audio from explicit Start/Enter gesture; show audio status fallback.                             |
+| Pointer lock behavior varies and hosted preview may be framed | Cannot look          | Feature detect; Promise/void + raw/standard fallback; friendly error; direct-page guidance.                    |
+| Dynamic shadows on integrated GPUs                            | Low FPS              | One shadow light, quality tiers, capped DPR, adaptive fallback.                                                |
+| Procedural art can read as generic                            | Lower atmosphere     | Strong clinic identity, custom signage/narrative, material variation, composition, lighting, prop silhouettes. |
+| Synthesized sounds may feel artificial                        | Lower fear response  | Layer filtered noise/oscillators, spatial timing, silence, varied envelopes, room-dependent filtering.         |
+| Axis-aligned collision diverges from visible props            | Sticking/clipping    | Collide only architecture/closed doors, keep props non-blocking or use simple authored blockers, add tests.    |
+| Long sequence can become unwinnable after refresh             | Player frustration   | Explicit deterministic stage machine, checkpoints, stage-derived world state, save validation, reset action.   |
+| WebGL context loss                                            | Blank screen         | Context lost/restored UI and recover/reload path; error boundary.                                              |
+| Background tab produces huge delta/audio drift                | Teleport/event burst | Delta clamp, pause on visibility, cancel transient schedules.                                                  |
+| Scope versus polish                                           | Generic broad demo   | One compact, replayable clinic floor; prioritize controls/audio/event timing over extra rooms or enemies.      |
 
 ## 16. Development milestones
 
